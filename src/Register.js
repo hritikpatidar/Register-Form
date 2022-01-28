@@ -21,7 +21,7 @@ function Register() {
       "email":email,
       "password":password
     }
-     fetch('https://fathomless-savannah-46209.herokuapp.com/api/auth/local/register' ,{
+     fetch('http://localhost:1337/api/auth/local/register' ,{
         method:'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ function Register() {
   return (
     <div className="row">
       <div className="col-6 offset-3 mt-5">
-        <h1 className="text-center">Register Form</h1>
+        <h1 className="text-center">Register Form (fatch API)</h1>
         <form>
           <input className="form-control" placeholder="Enter Username" type="text" name="username" value={ username } onChange={(e)=>{setUsername(e.target.value)}}/><br/>
           <input className="form-control" placeholder="Enter Email" type="email" name="email" value={ email } onChange={(e)=>{setEmail(e.target.value)}}/><br/>
